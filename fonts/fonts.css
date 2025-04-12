@@ -13,12 +13,5 @@
       url(./Inter-Variable.woff2) format('woff2 supports variations'),
       url(./Inter-Variable.woff2) format('woff2-variations');
     font-display: swap;
-    font-weight: 400 900;
+    font-weight: 400 785;
   }
-  
-  @supports (font-variation-settings: normal) {
-    .page {
-      font-family: var(--main_font), sans-serif;
-      font-variation-settings: 'wght' var(--main_card_font_weight, 400);
-    }
-  } 
