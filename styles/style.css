@@ -15,7 +15,7 @@
   }
   .page {
     font-family: var(--main_font), sans-serif;
-    font-variation-settings: 'wdth' var(--wdth, 100), 'wght' var(--main_card_font_weight, 400);
+    font-variation-settings: 'wght' var(--main_card_font_weight, 400);
   }
 }
 
@@ -37,7 +37,7 @@ main {
   background-image: var(--body_parent, none);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: 'wdth' var(--wdth, 100), 'wght' var(--main_card_font_weight, 400);
+  font-variation-settings: 'wght' var(--main_card_font_weight, 400);
 }
 
 .card__icon-button:focus, .button:focus {
@@ -103,7 +103,7 @@ main {
 .card_title {
   padding: 5px 10px;
   font-size: 18px;
-  font-variation-settings: 'wdth' var(--wdth, 100), 'wght' var(--main_card_title_weight, 700);
+  font-variation-settings: 'wght' var(--main_card_title_weight, 700);
   line-height: 117%;
 }
 
@@ -187,7 +187,7 @@ filter: grayscale(80%);
   font-size: 18px;
   line-height: 1.166;
   color: var(--card_font_color, #000);
-
+  font-variation-settings: 'wght' var(--main_card_font_weight, 400);
 }
 
 /* падинги в карточке */
