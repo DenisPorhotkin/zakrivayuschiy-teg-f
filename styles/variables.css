@@ -1,1 +1,19 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --accent_font: PressStart2P-Regular; /* шрифт в хедере и кнопках */
+    --accent_color: #000; /* цвет шрифта хедера и кнопок */
+    --main_font: inter-Variable; /* основной шрифт карточек */
+    --bg_color: #fff; /* фон карточек */
+    --card_font_color: #000; /* цвет текста карточек */
+    --page_section-size: 100%; /* ширина хедера */
+    --body_parent: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%); /* фон страницы */
+    --main_card_font_weight: 400; /* вес шрифта карточек */
+    --logo_font_size: 49px; /* размер шрифта логотипа в шапке */
+    --title_font_size: 14px; /* размер заголовка h1 в хидере */
+    --main_card_title_weight: 700; /* вес заголовка h2 карточки */
+    --animation_fill_color: red; /* цвет анимации сердца, искры */
+    --button_text_color: #fff; /* цвет текста в кнопках */
+    --button_font_color: #000; /* фон для анимации кнопок */
+    --contour_color: #000; /* цвет контура сердца на кнопке Like */
+    --label_contour_color: #fff; /* цвет обводки лейбла */
+}
