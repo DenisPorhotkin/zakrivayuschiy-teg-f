@@ -55,7 +55,9 @@
 }
 
 .like-icon.is-liked .sparks {
-    animation: change-opacity 0.3s 0.3s ease-in;
+    animation: 
+            change-opacity 0.3s 0.3s ease-in,
+            heart_sparks 0.3s ease-in 0.3s;
 }
 
 .like-icon.is-liked .contour {
@@ -76,10 +78,6 @@
 .like-icon.is-liked .heart {
     transform-origin: center;
     animation: heart_scale 0.3s ease-in 0.1s;
-}
-
-.like-icon.is-liked .sparks {
-    animation: heart_sparks 0.3s ease-in 0.3s;
 }
 
 .contour {
