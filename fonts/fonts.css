@@ -17,7 +17,8 @@
   }
   
   @supports (font-variation-settings: normal) {
-    :root {
-      --main_font: inter-Variable;
+    .page {
+      font-family: var(--main_font), sans-serif;
+      font-variation-settings: 'wght' var(--main_card_font_weight, 400);
     }
   } 
