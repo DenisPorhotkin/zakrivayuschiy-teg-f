@@ -23,12 +23,13 @@ main {
   min-block-size: 100dvh;
   padding: 100px 0;
   color: var(--accent_color), #000;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--main_font), sans-serif;
   background-color: var(--bg_color);
   background-image: var(--body_parent, none);
   background-size: cover;
   background-attachment: fixed;
   font-weight: 400;
+  font-variation-settings: 'wght' var(--main_card_font_weight, 400);  
 }
 
 .card__icon-button:focus, .button:focus {
@@ -95,6 +96,7 @@ main {
   padding: 5px 10px;
   font-size: 18px;
   font-weight: 700;
+  font-variation-settings: 'wght' var(--main_card_title_weight, 700);
   line-height: 117%;
 }
 
@@ -174,11 +176,12 @@ filter: grayscale(80%);
 
 .card_description {
   padding: 25px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--main_font), sans-serif;
   font-size: 18px;
   line-height: 1.166;
   color: var(--card_font_color, #000);
   font-weight: 400;
+  font-variation-settings: 'wght' var(--main_card_font_weight, 400);
 }
 
 /* падинги в карточке */
@@ -350,7 +353,7 @@ body:has(.dialog[open]) {
   }
   .card_title {
     font-variation-settings: 'wght' var(--main_card_title_weight, 700);
-  }  
+  }
 }
 
 
