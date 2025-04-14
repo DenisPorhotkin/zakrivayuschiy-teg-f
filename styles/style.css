@@ -22,7 +22,7 @@ main {
   min-inline-size: 320px;
   min-block-size: 100dvh;
   padding: 100px 0;
-  color: var(--accent_color), #000;
+  color: var(--accent_color, #000);
   font-family: var(--main_font), sans-serif;
   background-color: var(--bg_color);
   background-image: var(--body_parent, none);
@@ -107,6 +107,7 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   inline-size: var(--page_section-size, 50%);
   border-block-end: 2px solid var(--accent_color, #000);
   border-block-start: 2px solid var(--accent_color, #000);
@@ -130,7 +131,7 @@ main {
  }
 
 .blur_card_image {
-  filter: blur(8px);
+  filter: blur(19px);
 }
 
 .grayscale_card_image {
@@ -142,7 +143,7 @@ filter: grayscale(80%);
 }
 
 .hue-rotate_card_image {
-  filter: hue-rotate(90deg) contrast(50%);
+  filter: hue-rotate(90deg) contrast(50%) blur(2px);
 }
 
 .brightness_card_image {
@@ -159,7 +160,7 @@ filter: grayscale(80%);
   color: var(--accent_color, #000);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  padding: 22px 11px;
+  padding: 25px 24px;
   font-family: var(--accent_font), sans-serif;
   font-size: 14px;
   text-shadow: 1px 0 var(--label_contour_color, #fff),
@@ -181,14 +182,14 @@ filter: grayscale(80%);
   line-height: 1.166;
   color: var(--card_font_color, #000);
   font-weight: 400;
-  font-variation-settings: 'wght' var(--main_card_font_weight, 400);
 }
 
 /* падинги в карточке */
 
-.paragraph_correction {
+.card_description p:not(:last-child) {
   padding: 0 4px 27px 0;
 }
+
 
 /* место для иконки и кнопки */
 
@@ -196,7 +197,6 @@ filter: grayscale(80%);
   display: flex;
   justify-content: end;
   align-items: center;
-  max-height: 63px;
   padding: 0 25px 25px;
   gap: 6px;
 }
@@ -209,7 +209,7 @@ filter: grayscale(80%);
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  padding-block-start: 7px;
+  font-size: 0;
 }
 
 .button {
@@ -234,7 +234,7 @@ filter: grayscale(80%);
 /* кнопка Like */
 
 .card__like-button {
-  padding: 11px 0;
+  padding: 11.7px 0;
   min-width: 130px;
 }
 
@@ -276,6 +276,10 @@ filter: grayscale(80%);
 
 .button:focus-visible {
   box-shadow: 2px 2px var(--accent_color, #000);
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent_color, #000);
 }
 
 .button svg {
@@ -329,7 +333,7 @@ dialog[open] {
 }
 
 .dialog[open]::backdrop {
-  backdrop-filter: brightness(0.2);
+  backdrop-filter: brightness(0.25);
 }
 
 body:has(.dialog[open]) {
@@ -338,8 +342,9 @@ body:has(.dialog[open]) {
 
 /* проверяем поддержку свойств */
 
-@supports (text-stroke: 0.5px var(--label_contour_color,#fff)) {
+@supports (text-stroke: 0.5px var(--label_contour_color,#fff)) or (-webkit-text-stroke: 0.5px var(--label_contour_color)) {
   .label {
+    -webkit-text-stroke: 0.5px var(--label_contour_color,#fff);
     text-stroke: 0.5px var(--label_contour_color);
     text-shadow: none;
   }
