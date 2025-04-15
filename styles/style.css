@@ -366,17 +366,26 @@ body:has(.dialog[open]) {
   .button_save {
     flex-direction: column;
   }
+
   .button_save svg {
     block-size: 2em;
   }
+
   .dialog {
     padding: 30px 40px;
     max-width: 341px;
   }
+
   .icon-big {
     width: 90px;
   }
+
   :root {
   --title_font_size: 0.695vw;
   }
+
+  .label {
+    padding: 21px 11px;
+  }
+
 }
